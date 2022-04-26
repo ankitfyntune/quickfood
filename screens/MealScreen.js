@@ -47,6 +47,7 @@ const s = StyleSheet.create({
         textAlign: "center"
     },
     title: {
+        textAlign: "center",
         fontSize: 15,
         fontWeight: "bold"
     },
@@ -57,13 +58,14 @@ const s = StyleSheet.create({
     },
     tabs: {
         width: "100%",
-        backgroundColor: "lightgreen",
-        elevation: 4,
-        borderRadius: 10,
+        backgroundColor: "snow",
+        elevation: 1,
+        borderRadius: 4,
         marginVertical: 8,
         padding: 8
     },
     textBold: {
+        fontSize: 15,
         fontWeight: "bold"
     }
 })

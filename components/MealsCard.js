@@ -3,7 +3,7 @@ const MealsCard = ({ image, title, isVegetarian, onPress }) => {
     return (
         <View style={s.view}>
             <Pressable
-                style={({ pressed }) => pressed && s.opacity} android_ripple={{ color: "white" }}
+                android_ripple={{ color: "white" }}
                 onPress={onPress}
             >
                 <Image style={s.image} source={{ uri: image }} />
@@ -23,7 +23,8 @@ export default MealsCard;
 const s = StyleSheet.create({
     view: {
         flex: 1,
-        margin: 20,
+        marginVertical: 20,
+        marginHorizontal: 10,
         backgroundColor: "white",
         elevation: 4,
         borderRadius: 10,
@@ -38,16 +39,16 @@ const s = StyleSheet.create({
         padding: 10
     },
     title: {
+        textAlign: "center",
         fontSize: 15,
         fontWeight: "bold",
     },
     green: {
+        textAlign: "center",
         color: "green"
     },
     red: {
+        textAlign: "center",
         color: "red"
     },
-    opacity: {
-        opacity: 0.1
-    }
 })
