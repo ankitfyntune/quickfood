@@ -2,10 +2,12 @@ import {FlatList} from "react-native";
 import Card from "../components/Card";
 import { CATEGORIES } from "../data/dummy-data";
 const CategoryScreen = ({ navigation }) => {
-    const handelNavigation = () => {
-        navigation.navigate("Food")
+    const handelNavigation = (id) => {
+        navigation.navigate("Food", {
+            id
+        })
     }
-    const renderItem = ({item}) => <Card title={item.title} color={item.color} onPress={handelNavigation} />
+    const renderItem = ({item}) => <Card title={item.title} color={item.color} onPress={handelNavigation.bind(null,item.id)} />
     return ( 
         <FlatList
             data={CATEGORIES}
